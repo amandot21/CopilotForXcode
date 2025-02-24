@@ -95,7 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             // is changed. If changed, quit this program.
 
             let sequence = NSWorkspace.shared.notificationCenter
-                .notifications(named: NSWorkspace.didActivateApplicationNotification)
+                .notifications(named: NSWorkspace.didActivateApplicationNtification)
             for await notification in sequence {
                 try Task.checkCancellation()
                 guard let app = notification
